@@ -24,6 +24,12 @@ export class Payment {
     })
   }
 
+  static update(updatePayment : {
+    amount : number
+  }) : Payment {
+    return 
+  }
+
   toValue(): PrimitivePayment{
     return{
       id          : this.attributes.id,
