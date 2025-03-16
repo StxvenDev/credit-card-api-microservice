@@ -11,4 +11,11 @@ export class InMemoryPaymentRepository extends PaymentRepository{
       const payment = this.payments.find(payment => payment.id === id);
       return payment ? new Payment(payment) : null;
   }
+
+  async update(amount: number, id: string): Promise<Payment | null> {
+      const payment = this.payments.find(payment => payment.id === id);
+      console.log(this.payments)
+      payment.amount = amount;
+      return payment ? new Payment(payment) : null;
+  }
 }

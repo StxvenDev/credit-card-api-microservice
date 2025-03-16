@@ -3,7 +3,7 @@ import { CreatePaymentUseCase } from '../../../application/create-payment-use-ca
 import { CreatePaymentHttpDto } from './create-payment.http-dto';
 import { PrimitivePayment } from 'src/context/payments/domain/payment';
 @Controller('payments')
-export class createPaymentController {
+export class CreatePaymentController {
   constructor(private  createPaymentUseCse : CreatePaymentUseCase ){}
 
   @Post()

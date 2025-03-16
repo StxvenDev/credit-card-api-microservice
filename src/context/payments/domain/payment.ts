@@ -24,10 +24,11 @@ export class Payment {
     })
   }
 
-  static update(updatePayment : {
+  update(updatePayment : {
     amount : number
   }) : Payment {
-    return 
+    this.attributes.amount = updatePayment.amount;
+    return this
   }
 
   toValue(): PrimitivePayment{
