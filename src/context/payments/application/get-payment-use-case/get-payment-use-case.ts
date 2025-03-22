@@ -10,9 +10,8 @@ export class GetPaymentUseCase {
 
   async execute(getPaymentDto: GetPaymentUseCaseDto): Promise<{payment : PrimitivePayment}> {
     const payment = await this.paymentRepository.getById(getPaymentDto.id);
-    console.log(payment)
     if(!payment){
-      throw new PaymentNotFoundException(`Payment with id ${getPaymentDto.id} not found`)
+      throw new PaymentNotFoundException(`${getPaymentDto.id}`)
     }
     return {
       payment : payment.toValue()

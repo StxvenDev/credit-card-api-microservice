@@ -28,7 +28,11 @@ export class Payment {
     amount : number
   }) : Payment {
     this.attributes.amount = updatePayment.amount;
-    return this
+    return this;
+  }
+
+  delete(id: string) : Payment{
+    return this;
   }
 
   toValue(): PrimitivePayment{

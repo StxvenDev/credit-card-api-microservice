@@ -7,5 +7,7 @@ export abstract class PaymentRepository {
   abstract getById(id : string) : Promise<Payment | null>;
 
   abstract update(amount : number, id : string) : Promise<Payment>;
+
+  abstract delete(id: string) : Promise<void>;
   
 }
